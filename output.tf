@@ -1,6 +1,6 @@
 
 output "security_group" {
-    description = "Security group rule output"
+    description = "Security group rule output example"
     value = data.aws_vpc_security_group_rule.test
 }
 
