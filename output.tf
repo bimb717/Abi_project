@@ -4,7 +4,7 @@ output "security_group" {
     value = data.aws_vpc_security_group_rule.test
 }
 
-output "app_instance_public_dns" {
+output "app_instance_public_ip" {
   description = "Public IP address of the APP EC2 instance"
   value       = aws_instance.app.public_ip
 }
