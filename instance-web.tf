@@ -1,5 +1,5 @@
 resource "aws_instance" "web" {
-  count = 4
+  count = 1
   ami           = "ami-06ca3ca175f37dd66"
   instance_type = "t2.small"
   key_name = var.ec2_keypair_name
