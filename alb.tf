@@ -29,15 +29,6 @@ resource "aws_lb_listener" "front_end" {
     target_group_arn = "${aws_lb_target_group.tg.arn}"
     type             = "forward"
   }
-#   default_action {
-#     type = "redirect"
-
-#     redirect {
-#       port        = "443"
-#       protocol    = "HTTPS"
-#       status_code = "HTTP_301"
-#     }
-#   }
 }
 
 resource "aws_lb_listener_rule" "static" {
