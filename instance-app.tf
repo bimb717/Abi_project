@@ -1,6 +1,6 @@
 resource "aws_instance" "app" {
   count = 1
-  ami           = "ami-06ca3ca175f37dd66"
+  ami           = var.instance_app
   instance_type = "t2.micro"
   key_name = var.ec2_keypair_name
   vpc_security_group_ids = data.aws_security_groups.sgs.ids

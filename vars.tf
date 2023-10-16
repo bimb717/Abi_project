@@ -10,3 +10,11 @@ variable "vpc_id" {
   type    = string
   default = "vpc-2194715c"
 }
+variable "instance_app" {
+  type    = string
+  default = "ami-06ca3ca175f37dd66"
+}
+variable "instance_web_ami" {
+  type    = string
+  default = "ami-04a3fea0ceec717e5"
+}

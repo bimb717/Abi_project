@@ -8,6 +8,14 @@ output "web_instance_public_ip" {
   value       = aws_instance.web.*.public_ip
 }
 
+data "aws_security_group" "sg" {
+  id = "sg-0f1c0a78a499ec6bf"
+}
+
+output "security_group" {
+  value = data.aws_security_group.sg
+}
+
 # output "securitygroups" {
 #   value = data.aws_security_groups.sgs
 # }
