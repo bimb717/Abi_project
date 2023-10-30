@@ -3,7 +3,7 @@ data "aws_availability_zones" "azs" {}
 data "aws_security_groups" "sgs" {
   filter {
     name   = "group-name"    
-    values = var.security_group_names
+    values = ["launch-wizard-*"]
   }
 }
 

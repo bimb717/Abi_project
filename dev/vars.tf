@@ -10,10 +10,6 @@ variable "web_instance_type" {
   type    = string
   default = "t3.micro"
 }
-variable "color" {
-  type    = string
-  default = "blue"
-}
 variable "ec2_keypair_name" {
   type    = string
   default = "test-keypari"

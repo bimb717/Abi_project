@@ -6,6 +6,10 @@ variable "our_instance_type" {
   type    = string
   default = null
 }
+variable "our_instance_profile" {
+  type    = string
+  default = "Devops-ec2-role"
+}
 variable "abi_ec2_keypair_name" {
   type    = string
   default = "test-keypari"

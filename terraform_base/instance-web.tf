@@ -1,13 +1,12 @@
-module "instance" {
+module "instance_web" {
   source = "../instance_module"
 
-  our_ami = "ami-06ca3ca175f37dd66"
-  our_instance_type = "t2.micro"
+  our_ami = var.instance_web_ami
+  our_instance_type = var.web_instance_type
   abi_ec2_keypair_name = "test-keypari"
   yinka_vpc_security_group_ids = data.aws_security_groups.sgs.ids
   matt_subnet_ids = data.aws_subnets.lb_subnet.ids[1]
-  yomi_name_tag = "Devops-Web-dev"
   anoop_server_type = "web"
-  gamu_environment = "dev"
+  gamu_environment = var.environment_name
 
 }
